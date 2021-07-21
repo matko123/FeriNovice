@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_first_layout"
+            android:icon="@drawable/play2"
+            android:title="Oglasna deska" />
+        <item
+            android:id="@+id/nav_second_layout"
+            android:icon="@drawable/play2"
+            android:title="Novice" />
+        <item
+            android:id="@+id/nav_third_layout"
+            android:icon="@drawable/play2"
+            android:title="Obvestila za študente" />
+        <item
+            android:id="@+id/nav_fourth_layout"
+            android:icon="@drawable/play2"
+            android:title="Dogodki" />
+
+
+
+
+    </group>
+
+
+    <item android:title="Informacije">
+        <menu>
+            <item
+                android:id="@+id/nav_informacije"
+
+                android:title="O programu" />
+        </menu>
+    </item>
+
+</menu>

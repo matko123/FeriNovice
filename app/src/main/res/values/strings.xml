@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">NavigationDrawer</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_settings">Settings</string>
+    //
+    <string name="title_activity_rss">RSS Feed Activity</string>
+    <string name="title_activity_article">Article Activity</string>
+    <string name="msg.retry">Retry</string>
+</resources>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.user.navigationdrawer">
+    <!-- icon: nastavimo ikono nase aplikacije -->
+    <!-- sprva se zazene nas animirani splashscreen kar je seveda tudi tu definirano -->
+
+    <application
+        android:allowBackup="true"
+
+        android:icon="@drawable/logo_novi"
+        android:label="FERI novice"
+        android:supportsRtl="true"
+        android:name=".FeriNovice"
+
+        android:theme="@style/Theme.AppCompat.NoActionBar">
+        <activity
+            android:name=".SplashScreen.Splashscreen"
+
+            android:label="FERI novice">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".MainActivity"/>
+        <activity
+            android:name=".ui.article.ArtikelAktiviti"
+            android:label="@string/title_activity_article" />
+    </application>
+    <uses-permission android:name="android.permission.INTERNET" />
+
+</manifest>

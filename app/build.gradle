@@ -1,0 +1,54 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 23
+    buildToolsVersion "23.0.2"
+
+    defaultConfig {
+        applicationId "com.example.user.navigationdrawer"
+        minSdkVersion 15
+        targetSdkVersion 23
+        versionCode 1
+        versionName "1.0"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+
+// Excludes unwanted dependencies from Simple-XML library, otherwise the build breaks!
+configurations {
+    all*.exclude group: 'stax', module: 'stax'
+    all*.exclude group: 'stax', module: 'stax-api'
+    all*.exclude group: 'xpp3', module: 'xpp3'
+
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    testCompile 'junit:junit:4.12'
+    compile 'com.android.support:appcompat-v7:23.1.1'
+    compile 'com.android.support:design:23.1.1'
+    compile 'com.android.support:cardview-v7:23.+'
+    compile 'com.android.support:recyclerview-v7:23+'
+
+    // Google's Android libraries for various UI elements.
+    compile 'com.android.support:appcompat-v7:23.1.1'
+    compile 'com.android.support:design:23.1.1'
+
+    // More Android Support Libraries for the Feed list
+    compile 'com.android.support:cardview-v7:23.1.1'
+    compile 'com.android.support:recyclerview-v7:23.1.1'
+
+    // Use Retrofit to asynchronously retrieve items.
+    compile 'com.squareup.retrofit:retrofit:1.9.0'
+
+    // Use the Simple-XML parser to convert the items into POJOs.
+    compile('com.squareup.retrofit:converter-simplexml:1.9.0')
+    compile('org.simpleframework:simple-xml:2.7.1')
+
+}
+}
